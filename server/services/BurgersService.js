@@ -28,6 +28,7 @@ class BurgersService {
   }
 
   delete(id) {
+    // to string info only for this fake db
     const index = fakeDb.burgers.findIndex(b => b.id.toString() === id)
     if (index > -1) {
       throw new BadRequest('invalid id')
